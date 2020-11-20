@@ -1,4 +1,5 @@
 /*
+Author : Dimas Bagas Saputro
 
  */
 public abstract class Barang {
