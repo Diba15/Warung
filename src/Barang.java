@@ -1,9 +1,12 @@
-/*
-Author : Dimas Bagas Saputro
-
+/**
+ * Author : Dimas Bagas Saputro
+ * Program Warung
+ * Membuat Aplikasi Warung yang bisa menambahkan, manghapus dan menampilkan barang.
  */
+
+//Class dibuat Abstact karena nantinya class ini dipakai untuk diwariskan kepada class anak.
 public abstract class Barang {
-    protected String namaBarang,jenisBarang;
+    protected String namaBarang, jenisBarang;
     protected int stokBarang;
 
     public Barang(String namaBarang, int stokBarang, String jenisBarang) {
@@ -28,5 +31,6 @@ public abstract class Barang {
         return jenisBarang;
     }
 
+    //method yang akan diwariskan dan diubah isinya
     public abstract void display();
 }

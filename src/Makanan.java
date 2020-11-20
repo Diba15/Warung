@@ -1,3 +1,7 @@
+/**
+ * Pada class ini menggunakan extends untuk menggunakan class Barang sebagai class Induk
+ * Disini juga method display dirubah isinya.
+ */
 public class Makanan extends Barang {
     private String jenisMakanan;
     private String rasaMakanan;
@@ -18,12 +22,12 @@ public class Makanan extends Barang {
 
     @Override
     public void display() {
-        System.out.println("Nama \t: "+getNamaBarang());
-        System.out.println("Jenis Barang \t: "+getJenisBarang());
-        System.out.println("Stok Barang \t: "+getStokBarang());
+        System.out.println("Nama \t: " + getNamaBarang());
+        System.out.println("Jenis Barang \t: " + getJenisBarang());
+        System.out.println("Stok Barang \t: " + getStokBarang());
         System.out.println("------------------------------------------");
-        System.out.println("Jenis Makanan \t: "+getJenisMakanan());
-        System.out.println("Rasa Makanan \t: "+getRasaMakanan());
+        System.out.println("Jenis Makanan \t: " + getJenisMakanan());
+        System.out.println("Rasa Makanan \t: " + getRasaMakanan());
         System.out.println("==========================================");
     }
 }

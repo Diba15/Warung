@@ -1,5 +1,8 @@
 import java.util.*;
 
+/**
+ * Disini class Barang Melakukan Agregasi kepada class Warung
+ */
 public class Warung {
     private String namaWarung;
     private ArrayList<Barang> listBarang = new ArrayList<>();
@@ -16,15 +19,17 @@ public class Warung {
         listBarang.add(barang);
     }
 
+    //Menggunakan Collection yang bernama removeIf untuk menghapus barang secara spesifik
     public void deleteBarang(String namaBarang) {
         listBarang.removeIf(barang -> barang.getNamaBarang().equalsIgnoreCase(namaBarang));
     }
 
+    //Menggunakan input pilihDisplay untuk memilih Barang mana yang ingin ditampilkan
     public void displayBarang(int pilihDisplay) {
         switch (pilihDisplay) {
             case 1:
                 System.out.println("==== Makanan ====");
-                for (Barang barang:listBarang) {
+                for (Barang barang : listBarang) {
                     if (barang.getJenisBarang().equalsIgnoreCase("Makanan")) {
                         barang.display();
                     }
@@ -32,7 +37,7 @@ public class Warung {
                 break;
             case 2:
                 System.out.println("==== Sabun ====");
-                for (Barang barang:listBarang) {
+                for (Barang barang : listBarang) {
                     if (barang.getJenisBarang().equalsIgnoreCase("Sabun")) {
                         barang.display();
                     }
@@ -40,7 +45,7 @@ public class Warung {
                 break;
             case 3:
                 System.out.println("==== Minuman ====");
-                for (Barang barang:listBarang) {
+                for (Barang barang : listBarang) {
                     if (barang.getJenisBarang().equalsIgnoreCase("Minuman")) {
                         barang.display();
                     }
@@ -48,13 +53,14 @@ public class Warung {
                 break;
             case 4:
                 System.out.println("==== Barang ====");
-                for (Barang barang:listBarang) {
+                for (Barang barang : listBarang) {
                     barang.display();
                 }
                 break;
         }
     }
 
+    //Menggunakan pilihSort untuk Memilih ingin disortir berdasarkan apa
     public void sortirBarang(int pilihSort) {
         Comparator<Barang> compareNama = new SortNama();
         Comparator<Barang> compareJenis = new sortJenis();

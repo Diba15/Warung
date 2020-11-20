@@ -7,7 +7,7 @@ public class Main {
 
     private static void add() {
         int stokBarang;
-        String namaBarang,jenisBarang;
+        String namaBarang, jenisBarang;
         System.out.println("Ingin Menambahkan Barang Apa?");
         System.out.println("1.Makanan\t2.Sabun\t3.Minuman");
         System.out.print("Pilih : ");
@@ -24,7 +24,7 @@ public class Main {
                 String jenisMakanan = scanner.nextLine();
                 System.out.println("Masukkan Rasa Makanan : ");
                 String rasaMakanan = scanner.nextLine();
-                warung.addBarang(new Makanan(namaBarang,stokBarang,jenisBarang,jenisMakanan,rasaMakanan));
+                warung.addBarang(new Makanan(namaBarang, stokBarang, jenisBarang, jenisMakanan, rasaMakanan));
                 break;
             case 2:
                 String jenisSabun;
@@ -51,7 +51,7 @@ public class Main {
                 }
                 System.out.println("Masukkan Aroma Sabun : ");
                 String aromaSabun = scanner.nextLine();
-                warung.addBarang(new Sabun(namaBarang,stokBarang,jenisBarang,jenisSabun,aromaSabun));
+                warung.addBarang(new Sabun(namaBarang, stokBarang, jenisBarang, jenisSabun, aromaSabun));
                 break;
             case 3:
                 System.out.println("Masukkan Nama Barang : ");
@@ -64,7 +64,7 @@ public class Main {
                 String jenisMinuman = scanner.nextLine();
                 System.out.println("Masukkan Rasa Makanan : ");
                 String rasaMinuman = scanner.nextLine();
-                warung.addBarang(new Minuman(namaBarang,stokBarang,jenisBarang,jenisMinuman,rasaMinuman));
+                warung.addBarang(new Minuman(namaBarang, stokBarang, jenisBarang, jenisMinuman, rasaMinuman));
                 break;
         }
     }
@@ -183,7 +183,7 @@ public class Main {
 
     private static void runThis() {
         do {
-            System.out.println("==== "+ warung.getNamaWarung()+" ====");
+            System.out.println("==== " + warung.getNamaWarung() + " ====");
             System.out.println("1.Tambah Barang\t2.Display Barang\n3.Hapus Barang\t4.Exit");
             System.out.print("Pilih : ");
             pilih = scanner.nextInt();
@@ -205,17 +205,17 @@ public class Main {
     }
 
     private static void dummyData() {
-        warung.addBarang(new Makanan("Oreo",99,"Makanan","Snack",
+        warung.addBarang(new Makanan("Oreo", 99, "Makanan", "Snack",
                 "Coklat"));
-        warung.addBarang(new Makanan("Chiki",99,"Makanan","Snack",
+        warung.addBarang(new Makanan("Chiki", 99, "Makanan", "Snack",
                 "Keju"));
-        warung.addBarang(new Sabun("Lifebuoy",99,"Sabun","Mandi",
+        warung.addBarang(new Sabun("Lifebuoy", 99, "Sabun", "Mandi",
                 "Jeruk"));
-        warung.addBarang(new Sabun("Garnier",99,"Sabun","Cair",
+        warung.addBarang(new Sabun("Garnier", 99, "Sabun", "Cair",
                 "Bengkoang"));
-        warung.addBarang(new Minuman("Marimas",80,"Minuman","Bubuk",
+        warung.addBarang(new Minuman("Marimas", 80, "Minuman", "Bubuk",
                 "Jeruk"));
-        warung.addBarang(new Minuman("Yakult",99,"Minuman","Cair",
+        warung.addBarang(new Minuman("Yakult", 99, "Minuman", "Cair",
                 "Biasa"));
     }
 
