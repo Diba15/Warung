@@ -204,6 +204,7 @@ public class Main {
         } while (true);
     }
 
+    //Data Dummy untuk contoh
     private static void dummyData() {
         warung.addBarang(new Makanan("Oreo", 99, "Makanan", "Snack",
                 "Coklat"));
