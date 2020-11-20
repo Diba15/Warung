@@ -1,3 +1,4 @@
+import Barang.*;
 import java.util.*;
 
 public class Main {
@@ -8,33 +9,33 @@ public class Main {
     private static void add() {
         int stokBarang;
         String namaBarang, jenisBarang;
-        System.out.println("Ingin Menambahkan Barang Apa?");
-        System.out.println("1.Makanan\t2.Sabun\t3.Minuman");
+        System.out.println("Ingin Menambahkan Barang.Barang Apa?");
+        System.out.println("1.Barang.Makanan\t2.Barang.Sabun\t3.Barang.Minuman");
         System.out.print("Pilih : ");
         pilih = scanner.nextInt();
         switch (pilih) {
             case 1:
-                System.out.println("Masukkan Nama Barang : ");
+                System.out.println("Masukkan Nama Barang.Barang : ");
                 namaBarang = scanner.nextLine();
-                System.out.println("Masukkan Jenis Barang : ");
+                System.out.println("Masukkan Jenis Barang.Barang : ");
                 jenisBarang = scanner.nextLine();
-                System.out.println("Masukkan Stok Barang yang Tersedia : ");
+                System.out.println("Masukkan Stok Barang.Barang yang Tersedia : ");
                 stokBarang = scanner.nextInt();
-                System.out.println("Masukkan Jenis Makanan : ");
+                System.out.println("Masukkan Jenis Barang.Makanan : ");
                 String jenisMakanan = scanner.nextLine();
-                System.out.println("Masukkan Rasa Makanan : ");
+                System.out.println("Masukkan Rasa Barang.Makanan : ");
                 String rasaMakanan = scanner.nextLine();
                 warung.addBarang(new Makanan(namaBarang, stokBarang, jenisBarang, jenisMakanan, rasaMakanan));
                 break;
             case 2:
                 String jenisSabun;
-                System.out.println("Masukkan Nama Barang : ");
+                System.out.println("Masukkan Nama Barang.Barang : ");
                 namaBarang = scanner.nextLine();
-                System.out.println("Masukkan Jenis Barang : ");
+                System.out.println("Masukkan Jenis Barang.Barang : ");
                 jenisBarang = scanner.nextLine();
-                System.out.println("Masukkan Stok Barang yang Tersedia : ");
+                System.out.println("Masukkan Stok Barang.Barang yang Tersedia : ");
                 stokBarang = scanner.nextInt();
-                System.out.println("Jenis Sabun[1.Cair\t2.Bubuk\t3.Mandi]");
+                System.out.println("Jenis Barang.Sabun[1.Cair\t2.Bubuk\t3.Mandi]");
                 System.out.print("Pilih");
                 int pilihJenis = scanner.nextInt();
                 switch (pilihJenis) {
@@ -49,20 +50,20 @@ public class Main {
                         jenisSabun = "Mandi";
                         break;
                 }
-                System.out.println("Masukkan Aroma Sabun : ");
+                System.out.println("Masukkan Aroma Barang.Sabun : ");
                 String aromaSabun = scanner.nextLine();
                 warung.addBarang(new Sabun(namaBarang, stokBarang, jenisBarang, jenisSabun, aromaSabun));
                 break;
             case 3:
-                System.out.println("Masukkan Nama Barang : ");
+                System.out.println("Masukkan Nama Barang.Barang : ");
                 namaBarang = scanner.nextLine();
-                System.out.println("Masukkan Jenis Barang : ");
+                System.out.println("Masukkan Jenis Barang.Barang : ");
                 jenisBarang = scanner.nextLine();
-                System.out.println("Masukkan Stok Barang yang Tersedia : ");
+                System.out.println("Masukkan Stok Barang.Barang yang Tersedia : ");
                 stokBarang = scanner.nextInt();
-                System.out.println("Masukkan Jenis Makanan : ");
+                System.out.println("Masukkan Jenis Barang.Makanan : ");
                 String jenisMinuman = scanner.nextLine();
-                System.out.println("Masukkan Rasa Makanan : ");
+                System.out.println("Masukkan Rasa Barang.Makanan : ");
                 String rasaMinuman = scanner.nextLine();
                 warung.addBarang(new Minuman(namaBarang, stokBarang, jenisBarang, jenisMinuman, rasaMinuman));
                 break;
@@ -70,15 +71,15 @@ public class Main {
     }
 
     private static void delete() {
-        System.out.println("Masukkan Nama Barang yang ingin dihapus : ");
+        System.out.println("Masukkan Nama Barang.Barang yang ingin dihapus : ");
         String namaBarang = scanner.next();
         warung.deleteBarang(namaBarang);
     }
 
     private static void display() {
         char confUrut;
-        System.out.println("Ingin Display Barang apa?");
-        System.out.println("1.Makanan\t2.Sabun\n3.Minuman\t4.Semua");
+        System.out.println("Ingin Display Barang.Barang apa?");
+        System.out.println("1.Barang.Makanan\t2.Barang.Sabun\n3.Barang.Minuman\t4.Semua");
         System.out.print("Pilih : ");
         pilih = scanner.nextInt();
         switch (pilih) {
@@ -184,7 +185,7 @@ public class Main {
     private static void runThis() {
         do {
             System.out.println("==== " + warung.getNamaWarung() + " ====");
-            System.out.println("1.Tambah Barang\t2.Display Barang\n3.Hapus Barang\t4.Exit");
+            System.out.println("1.Tambah Barang.Barang\t2.Display Barang.Barang\n3.Hapus Barang.Barang\t4.Exit");
             System.out.print("Pilih : ");
             pilih = scanner.nextInt();
             switch (pilih) {
@@ -206,17 +207,17 @@ public class Main {
 
     //Data Dummy untuk contoh
     private static void dummyData() {
-        warung.addBarang(new Makanan("Oreo", 99, "Makanan", "Snack",
+        warung.addBarang(new Makanan("Oreo", 99, "Barang.Makanan", "Snack",
                 "Coklat"));
-        warung.addBarang(new Makanan("Chiki", 99, "Makanan", "Snack",
+        warung.addBarang(new Makanan("Chiki", 99, "Barang.Makanan", "Snack",
                 "Keju"));
-        warung.addBarang(new Sabun("Lifebuoy", 99, "Sabun", "Mandi",
+        warung.addBarang(new Sabun("Lifebuoy", 99, "Barang.Sabun", "Mandi",
                 "Jeruk"));
-        warung.addBarang(new Sabun("Garnier", 99, "Sabun", "Cair",
+        warung.addBarang(new Sabun("Garnier", 99, "Barang.Sabun", "Cair",
                 "Bengkoang"));
-        warung.addBarang(new Minuman("Marimas", 80, "Minuman", "Bubuk",
+        warung.addBarang(new Minuman("Marimas", 80, "Barang.Minuman", "Bubuk",
                 "Jeruk"));
-        warung.addBarang(new Minuman("Yakult", 99, "Minuman", "Cair",
+        warung.addBarang(new Minuman("Yakult", 99, "Barang.Minuman", "Cair",
                 "Biasa"));
     }
 

@@ -1,5 +1,7 @@
+package Barang;
+
 /**
- * Pada class ini menggunakan extends untuk menggunakan class Barang sebagai class Induk
+ * Pada class ini menggunakan extends untuk menggunakan class Barang.Barang sebagai class Induk
  * Disini juga method display dirubah isinya.
  */
 public class Sabun extends Barang {
@@ -23,11 +25,11 @@ public class Sabun extends Barang {
     @Override
     public void display() {
         System.out.println("Nama \t: " + getNamaBarang());
-        System.out.println("Jenis Barang \t: " + getJenisBarang());
-        System.out.println("Stok Barang \t: " + getStokBarang());
+        System.out.println("Jenis Barang.Barang \t: " + getJenisBarang());
+        System.out.println("Stok Barang.Barang \t: " + getStokBarang());
         System.out.println("------------------------------------------");
-        System.out.println("Jenis Sabun \t: " + getJenisSabun());
-        System.out.println("Aroma Sabun \t: " + getAromaSabun());
+        System.out.println("Jenis Barang.Sabun \t: " + getJenisSabun());
+        System.out.println("Aroma Barang.Sabun \t: " + getAromaSabun());
         System.out.println("==========================================");
     }
 }

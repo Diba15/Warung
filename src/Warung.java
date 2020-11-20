@@ -1,11 +1,13 @@
+import Barang.Barang;
+import Sort.*;
 import java.util.*;
 
 /**
- * Disini class Barang Melakukan Agregasi kepada class Warung
+ * Disini class Barang.Barang Melakukan Agregasi kepada class Warung
  */
 public class Warung {
-    private String namaWarung;
-    private ArrayList<Barang> listBarang = new ArrayList<>();
+    private final String namaWarung;
+    private final ArrayList<Barang> listBarang = new ArrayList<>();
 
     public Warung(String namaWarung) {
         this.namaWarung = namaWarung;
@@ -24,35 +26,35 @@ public class Warung {
         listBarang.removeIf(barang -> barang.getNamaBarang().equalsIgnoreCase(namaBarang));
     }
 
-    //Menggunakan input pilihDisplay untuk memilih Barang mana yang ingin ditampilkan
+    //Menggunakan input pilihDisplay untuk memilih Barang.Barang mana yang ingin ditampilkan
     public void displayBarang(int pilihDisplay) {
         switch (pilihDisplay) {
             case 1:
-                System.out.println("==== Makanan ====");
+                System.out.println("==== Barang.Makanan ====");
                 for (Barang barang : listBarang) {
-                    if (barang.getJenisBarang().equalsIgnoreCase("Makanan")) {
+                    if (barang.getJenisBarang().equalsIgnoreCase("Barang.Makanan")) {
                         barang.display();
                     }
                 }
                 break;
             case 2:
-                System.out.println("==== Sabun ====");
+                System.out.println("==== Barang.Sabun ====");
                 for (Barang barang : listBarang) {
-                    if (barang.getJenisBarang().equalsIgnoreCase("Sabun")) {
+                    if (barang.getJenisBarang().equalsIgnoreCase("Barang.Sabun")) {
                         barang.display();
                     }
                 }
                 break;
             case 3:
-                System.out.println("==== Minuman ====");
+                System.out.println("==== Barang.Minuman ====");
                 for (Barang barang : listBarang) {
-                    if (barang.getJenisBarang().equalsIgnoreCase("Minuman")) {
+                    if (barang.getJenisBarang().equalsIgnoreCase("Barang.Minuman")) {
                         barang.display();
                     }
                 }
                 break;
             case 4:
-                System.out.println("==== Barang ====");
+                System.out.println("==== Barang.Barang ====");
                 for (Barang barang : listBarang) {
                     barang.display();
                 }

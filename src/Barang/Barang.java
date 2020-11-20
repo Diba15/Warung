@@ -1,3 +1,5 @@
+package Barang;
+
 /**
  * Author : Dimas Bagas Saputro
  * Program Warung

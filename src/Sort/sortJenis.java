@@ -1,3 +1,7 @@
+package Sort;
+
+import Barang.Barang;
+
 import java.util.Comparator;
 
 public class sortJenis implements Comparator<Barang> {
