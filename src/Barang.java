@@ -1,3 +1,6 @@
+/*
+
+ */
 public abstract class Barang {
     protected String namaBarang,jenisBarang;
     protected int stokBarang;
