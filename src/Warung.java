@@ -1,5 +1,6 @@
 import Barang.Barang;
 import Sort.*;
+
 import java.util.*;
 
 /**
@@ -8,7 +9,6 @@ import java.util.*;
 public class Warung {
     private final String namaWarung;
     private final ArrayList<Barang> listBarang = new ArrayList<>();
-    private final ArrayList<Customer> listCustomer = new ArrayList<>();
 
     //----------------------------- Method For listBarang ------------------------------
 
@@ -76,35 +76,6 @@ public class Warung {
             case 2:
                 listBarang.sort(compareJenis);
                 break;
-        }
-    }
-
-    //----------------------------- Method For listCustomer ------------------------------
-
-    public void add(Customer customer) {
-        listCustomer.add(customer);
-    }
-
-    public void beli(String namaCust, String namaBarang) {
-        for (Customer customer: listCustomer) {
-            if (namaCust.equalsIgnoreCase(customer.getNama())) {
-                for (Barang barang: listBarang) {
-                    if (namaBarang.equalsIgnoreCase(barang.getNamaBarang())) {
-                        customer.setSaldo(customer.getSaldo() - barang.getHargaBarang());
-                    } else {
-                        System.out.println("Barang Kosong!");
-                    }
-                }
-            } else {
-                System.out.println("Customer tidak ditemukan!");
-            }
-        }
-    }
-
-    public void displayCust() {
-        System.out.println("==== Customer ====");
-        for (Customer customer:listCustomer) {
-            customer.display();
         }
     }
 

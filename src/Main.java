@@ -192,25 +192,7 @@ public class Main {
     private static void runThis() {
         do {
             System.out.println("==== " + warung.getNamaWarung() + " ====");
-            System.out.println("1.Tambah Barang\t2.Display Barang\n3.Hapus Barang\t4.Exit");
-            System.out.print("Pilih : ");
-            pilih = scanner.nextInt();
-            switch (pilih) {
-                case 1:
-                    add();
-                    break;
-                case 2:
-                    display();
-                    break;
-                case 3:
-                    delete();
-                    break;
-                case 4:
-                    System.exit(0);
-                    break;
-            }
-            System.out.println("==== " + warung.getNamaWarung() + " ====");
-            System.out.println("1.Tambah Barang\t2.Display Barang\n3.Hapus Barang\t4.Exit");
+            System.out.println("1.Tambah Barang\n2.Display Barang\n3.Hapus Barang\n4.Exit");
             System.out.print("Pilih : ");
             pilih = scanner.nextInt();
             switch (pilih) {
