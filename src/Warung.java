@@ -9,6 +9,8 @@ public class Warung {
     private final String namaWarung;
     private final ArrayList<Barang> listBarang = new ArrayList<>();
 
+    //----------------------------- Method For listBarang ------------------------------
+
     public Warung(String namaWarung) {
         this.namaWarung = namaWarung;
     }

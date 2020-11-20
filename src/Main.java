@@ -57,7 +57,7 @@ public class Main {
                 }
                 System.out.println("Masukkan Aroma Sabun : ");
                 String aromaSabun = scanner.nextLine();
-                warung.addBarang(new Sabun(namaBarang, stokBarang, jenisBarang,hargaBarang, jenisSabun, aromaSabun));
+                warung.addBarang(new Sabun(namaBarang, stokBarang, jenisBarang, hargaBarang, jenisSabun, aromaSabun));
                 break;
             case 3:
                 System.out.println("Masukkan Nama Barang : ");
@@ -72,7 +72,7 @@ public class Main {
                 String jenisMinuman = scanner.nextLine();
                 System.out.println("Masukkan Rasa Minuman : ");
                 String rasaMinuman = scanner.nextLine();
-                warung.addBarang(new Minuman(namaBarang, stokBarang, jenisBarang,hargaBarang, jenisMinuman, rasaMinuman));
+                warung.addBarang(new Minuman(namaBarang, stokBarang, jenisBarang, hargaBarang, jenisMinuman, rasaMinuman));
                 break;
         }
     }
@@ -192,7 +192,7 @@ public class Main {
     private static void runThis() {
         do {
             System.out.println("==== " + warung.getNamaWarung() + " ====");
-            System.out.println("1.Tambah Barang.Barang\t2.Display Barang.Barang\n3.Hapus Barang.Barang\t4.Exit");
+            System.out.println("1.Tambah Barang\t2.Display Barang\n3.Hapus Barang\t4.Exit");
             System.out.print("Pilih : ");
             pilih = scanner.nextInt();
             switch (pilih) {
@@ -209,8 +209,26 @@ public class Main {
                     System.exit(0);
                     break;
             }
-        } while (true);
-    }
+            System.out.println("==== " + warung.getNamaWarung() + " ====");
+            System.out.println("1.Tambah Barang\t2.Display Barang\n3.Hapus Barang\t4.Exit");
+            System.out.print("Pilih : ");
+            pilih = scanner.nextInt();
+            switch (pilih) {
+                case 1:
+                    add();
+                    break;
+                case 2:
+                    display();
+                    break;
+                case 3:
+                    delete();
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+            }
+    } while(true);
+}
 
     //Data Dummy untuk contoh
     private static void dummyData() {
