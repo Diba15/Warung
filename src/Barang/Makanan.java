@@ -8,8 +8,8 @@ public class Makanan extends Barang {
     private String jenisMakanan;
     private String rasaMakanan;
 
-    public Makanan(String namaBarang, int stokBarang, String jenisBarang, String jenisMakanan, String rasaMakanan) {
-        super(namaBarang, stokBarang, jenisBarang);
+    public Makanan(String namaBarang, int stokBarang, String jenisBarang, int hargaBarang, String jenisMakanan, String rasaMakanan) {
+        super(namaBarang, stokBarang, jenisBarang, hargaBarang);
         this.jenisMakanan = jenisMakanan;
         this.rasaMakanan = rasaMakanan;
     }
@@ -25,11 +25,12 @@ public class Makanan extends Barang {
     @Override
     public void display() {
         System.out.println("Nama \t: " + getNamaBarang());
-        System.out.println("Jenis Barang.Barang \t: " + getJenisBarang());
-        System.out.println("Stok Barang.Barang \t: " + getStokBarang());
+        System.out.println("Jenis Barang \t: " + getJenisBarang());
+        System.out.println("Harga Barang \t: "+getHargaBarang());
+        System.out.println("Stok Barang \t: " + getStokBarang());
         System.out.println("------------------------------------------");
-        System.out.println("Jenis Barang.Makanan \t: " + getJenisMakanan());
-        System.out.println("Rasa Barang.Makanan \t: " + getRasaMakanan());
+        System.out.println("Jenis Makanan \t: " + getJenisMakanan());
+        System.out.println("Rasa Makanan \t: " + getRasaMakanan());
         System.out.println("==========================================");
     }
 }

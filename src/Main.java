@@ -1,4 +1,5 @@
 import Barang.*;
+
 import java.util.*;
 
 public class Main {
@@ -7,35 +8,39 @@ public class Main {
     static int pilih;
 
     private static void add() {
-        int stokBarang;
+        int stokBarang, hargaBarang;
         String namaBarang, jenisBarang;
-        System.out.println("Ingin Menambahkan Barang.Barang Apa?");
-        System.out.println("1.Barang.Makanan\t2.Barang.Sabun\t3.Barang.Minuman");
+        System.out.println("Ingin Menambahkan Barang Apa?");
+        System.out.println("1.Makanan\t2.Sabun\t3.Minuman");
         System.out.print("Pilih : ");
         pilih = scanner.nextInt();
         switch (pilih) {
             case 1:
-                System.out.println("Masukkan Nama Barang.Barang : ");
+                System.out.println("Masukkan Nama Barang : ");
                 namaBarang = scanner.nextLine();
-                System.out.println("Masukkan Jenis Barang.Barang : ");
+                System.out.println("Masukkan Jenis Barang : ");
                 jenisBarang = scanner.nextLine();
-                System.out.println("Masukkan Stok Barang.Barang yang Tersedia : ");
+                System.out.println("Masukkan Harga Barang : ");
+                hargaBarang = scanner.nextInt();
+                System.out.println("Masukkan Stok Barang yang Tersedia : ");
                 stokBarang = scanner.nextInt();
-                System.out.println("Masukkan Jenis Barang.Makanan : ");
+                System.out.println("Masukkan Jenis Makanan : ");
                 String jenisMakanan = scanner.nextLine();
-                System.out.println("Masukkan Rasa Barang.Makanan : ");
+                System.out.println("Masukkan Rasa Makanan : ");
                 String rasaMakanan = scanner.nextLine();
-                warung.addBarang(new Makanan(namaBarang, stokBarang, jenisBarang, jenisMakanan, rasaMakanan));
+                warung.addBarang(new Makanan(namaBarang, stokBarang, jenisBarang, hargaBarang, jenisMakanan, rasaMakanan));
                 break;
             case 2:
                 String jenisSabun;
-                System.out.println("Masukkan Nama Barang.Barang : ");
+                System.out.println("Masukkan Nama Barang : ");
                 namaBarang = scanner.nextLine();
-                System.out.println("Masukkan Jenis Barang.Barang : ");
+                System.out.println("Masukkan Jenis Barang : ");
                 jenisBarang = scanner.nextLine();
-                System.out.println("Masukkan Stok Barang.Barang yang Tersedia : ");
+                System.out.println("Masukkan Harga Barang : ");
+                hargaBarang = scanner.nextInt();
+                System.out.println("Masukkan Stok Barang yang Tersedia : ");
                 stokBarang = scanner.nextInt();
-                System.out.println("Jenis Barang.Sabun[1.Cair\t2.Bubuk\t3.Mandi]");
+                System.out.println("Jenis Sabun[1.Cair\t2.Bubuk\t3.Mandi]");
                 System.out.print("Pilih");
                 int pilihJenis = scanner.nextInt();
                 switch (pilihJenis) {
@@ -50,28 +55,30 @@ public class Main {
                         jenisSabun = "Mandi";
                         break;
                 }
-                System.out.println("Masukkan Aroma Barang.Sabun : ");
+                System.out.println("Masukkan Aroma Sabun : ");
                 String aromaSabun = scanner.nextLine();
-                warung.addBarang(new Sabun(namaBarang, stokBarang, jenisBarang, jenisSabun, aromaSabun));
+                warung.addBarang(new Sabun(namaBarang, stokBarang, jenisBarang,hargaBarang, jenisSabun, aromaSabun));
                 break;
             case 3:
-                System.out.println("Masukkan Nama Barang.Barang : ");
+                System.out.println("Masukkan Nama Barang : ");
                 namaBarang = scanner.nextLine();
-                System.out.println("Masukkan Jenis Barang.Barang : ");
+                System.out.println("Masukkan Jenis Barang : ");
                 jenisBarang = scanner.nextLine();
-                System.out.println("Masukkan Stok Barang.Barang yang Tersedia : ");
+                System.out.println("Masukkan Harga Barang : ");
+                hargaBarang = scanner.nextInt();
+                System.out.println("Masukkan Stok Barang yang Tersedia : ");
                 stokBarang = scanner.nextInt();
-                System.out.println("Masukkan Jenis Barang.Makanan : ");
+                System.out.println("Masukkan Jenis Minuman : ");
                 String jenisMinuman = scanner.nextLine();
-                System.out.println("Masukkan Rasa Barang.Makanan : ");
+                System.out.println("Masukkan Rasa Minuman : ");
                 String rasaMinuman = scanner.nextLine();
-                warung.addBarang(new Minuman(namaBarang, stokBarang, jenisBarang, jenisMinuman, rasaMinuman));
+                warung.addBarang(new Minuman(namaBarang, stokBarang, jenisBarang,hargaBarang, jenisMinuman, rasaMinuman));
                 break;
         }
     }
 
     private static void delete() {
-        System.out.println("Masukkan Nama Barang.Barang yang ingin dihapus : ");
+        System.out.println("Masukkan Nama Barang yang ingin dihapus : ");
         String namaBarang = scanner.next();
         warung.deleteBarang(namaBarang);
     }
@@ -207,17 +214,17 @@ public class Main {
 
     //Data Dummy untuk contoh
     private static void dummyData() {
-        warung.addBarang(new Makanan("Oreo", 99, "Barang.Makanan", "Snack",
+        warung.addBarang(new Makanan("Oreo", 99, "Barang.Makanan", 1000, "Snack",
                 "Coklat"));
-        warung.addBarang(new Makanan("Chiki", 99, "Barang.Makanan", "Snack",
+        warung.addBarang(new Makanan("Chiki", 99, "Barang.Makanan", 2000, "Snack",
                 "Keju"));
-        warung.addBarang(new Sabun("Lifebuoy", 99, "Barang.Sabun", "Mandi",
+        warung.addBarang(new Sabun("Lifebuoy", 99, "Barang.Sabun", 5000, "Mandi",
                 "Jeruk"));
-        warung.addBarang(new Sabun("Garnier", 99, "Barang.Sabun", "Cair",
+        warung.addBarang(new Sabun("Garnier", 99, "Barang.Sabun", 4000, "Cair",
                 "Bengkoang"));
-        warung.addBarang(new Minuman("Marimas", 80, "Barang.Minuman", "Bubuk",
+        warung.addBarang(new Minuman("Marimas", 80, "Barang.Minuman", 6000, "Bubuk",
                 "Jeruk"));
-        warung.addBarang(new Minuman("Yakult", 99, "Barang.Minuman", "Cair",
+        warung.addBarang(new Minuman("Yakult", 99, "Barang.Minuman", 2000, "Cair",
                 "Biasa"));
     }
 

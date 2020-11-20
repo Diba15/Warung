@@ -3,7 +3,7 @@ import Sort.*;
 import java.util.*;
 
 /**
- * Disini class Barang.Barang Melakukan Agregasi kepada class Warung
+ * Disini class Barang.java Melakukan Agregasi kepada class Warung
  */
 public class Warung {
     private final String namaWarung;
