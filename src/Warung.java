@@ -8,6 +8,7 @@ import java.util.*;
  */
 public class Warung {
     private final String namaWarung;
+    //Aggregation Barang.java ArrayList
     private final ArrayList<Barang> listBarang = new ArrayList<>();
 
     //----------------------------- Method For listBarang ------------------------------

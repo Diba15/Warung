@@ -26,10 +26,6 @@ public abstract class Barang {
         return stokBarang;
     }
 
-    public void setStokBarang(int stokBarang) {
-        this.stokBarang = stokBarang;
-    }
-
     public String getJenisBarang() {
         return jenisBarang;
     }

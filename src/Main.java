@@ -3,6 +3,7 @@ import Barang.*;
 import java.util.*;
 
 public class Main {
+    //instantiate class Warung dan menggunakan static pada variable agar bisa digunakan pada method static
     static Warung warung = new Warung("Warung Bu Imas");
     static Scanner scanner = new Scanner(System.in);
     static int pilih;
