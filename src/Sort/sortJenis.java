@@ -4,6 +4,7 @@ import Barang.Barang;
 
 import java.util.Comparator;
 
+// Implementasi Interface Java yaitu Comparator untuk membandingkan data
 public class sortJenis implements Comparator<Barang> {
 
     @Override

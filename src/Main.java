@@ -8,6 +8,7 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
     static int pilih;
 
+    //Method
     private static void add() {
         int stokBarang, hargaBarang;
         String namaBarang, jenisBarang;
@@ -229,6 +230,7 @@ public class Main {
                 "Biasa"));
     }
 
+    //Main
     public static void main(String[] args) {
         dummyData();
         runThis();
